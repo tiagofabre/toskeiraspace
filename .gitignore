@@ -1,12 +1,1 @@
-dist/
-generated/
-.sass-cache
-.settings/
-.classpath
-.project
-*~
-.*
-*.iml
-!/.gitignore
-/build
-/bin
+*.log

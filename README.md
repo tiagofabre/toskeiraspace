@@ -8,3 +8,4 @@ clone and open index.html
 ![Alt ts](https://github.com/panther-js/toskeiraspace/raw/master/ts.png)
 
 > Initial idea and javascript core js game by [Sombriks](https://github.com/sombriks).
+

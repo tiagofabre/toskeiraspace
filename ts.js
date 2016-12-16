@@ -17,7 +17,7 @@ window.toskeiraspace = () => {
 
     draw (ctx) {
       ctx.fillStyle = 'White';
-      ctx.fillText('Score: ' + this.score, 10, 10);
+      ctx.fillText(`score: ${this.score},`, 10, 10);
     }
   }
 

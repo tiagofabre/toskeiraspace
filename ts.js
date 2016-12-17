@@ -5,9 +5,9 @@
  */
 
 window.toskeiraspace = () => {
-  let c = document.getElementById('c');
+  const c = document.getElementById('c');
   class Player {
-    constructor (score, pangle, initialClick, initialMove) {
+    constructor (score = 0, pangle = 1, initialClick = { x: 400, y: 300 }, initialMove = { x: 400, y: 300 }) {
       this.score = score;
       this.pangle = pangle;
       this.click = initialClick;
@@ -21,13 +21,10 @@ window.toskeiraspace = () => {
     }
   }
 
-  var player = new Player(0, 1, { x: 400, y: 300 }, { x: 400, y: 300 });
+  let player = new Player();
 
   class Sprite {
-    constructor (p) {
-      if (!p) {
-        p = {};
-      }
+    constructor (p = {}) {
       this.angle = p.angle || 0.7;
       this.x = p.x || 400;
       this.y = p.y || 300;
@@ -297,7 +294,7 @@ window.toskeiraspace = () => {
   c.onmousemove = move;
 
   let ctx = c.getContext('2d');
-  function mainLoop () {
+  mainLoop = () => {
     step();
     draw(ctx);
     setTimeout(mainLoop, 5);
